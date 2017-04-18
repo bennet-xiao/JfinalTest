@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Account</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+	<!--header-->
+	#include("include/header.html")
+	<!--//header-->
+	<!--account-->
+	<div class="account">
+		<div class="container">
+			<div class="register">
+				<form action="/cake/user/addUser" method="post" id="register_form"> 
+					<div class="register-top-grid">
+						<h3>Personal information</h3>
+						<input type="hidden" name="add_user_token" value="#(add_user_token)">
+<!-- 						<div class="input"> -->
+<!-- 							<span>First Name<label>*</label></span> -->
+<!-- 							<input type="text">  -->
+<!-- 						</div> -->
+						<div class="input">
+							<span>Name<label>*</label></span>
+							<input type="text" name="user.user_name" class="ui-not-null" data-toggle="popover" data-placement="right"
+							 data-content="请输入姓名"/> 
+						</div>
+						<div class="input">
+							<span>Phone Number<label>*</label></span>
+							<input type="text" name="user.phone" class="ui-not-null" data-toggle="popover" data-placement="right"
+							data-content="请输入电话号码"/> 
+						</div>
+<!-- 						<a class="news-letter" href="#"> -->
+<!-- 							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label> -->
+<!-- 						</a> -->
+						<div class="clearfix"> </div>
+					</div>
+				    <div class="register-bottom-grid">
+						<h3>Login information</h3>
+						<div class="input">
+							<span>Password<label>*</label></span>
+							<input type="password" name="user.password" id="user_pass1" class="ui-not-null" data-toggle="popover" data-placement="right"
+							data-content="请输入密码"/>
+						</div>
+						<div class="input">
+							<span>Confirm Password<label>*</label></span>
+							<input type="password" name='pass2' id="user_pass2" data-toggle="popover" data-placement="right"
+							data-content="两次密码不相同"/>
+						 </div>
+					</div>
+<!-- 				</form> -->
+				<div class="clearfix"> </div>
+				<div class="register-but">
+<!-- 				   <form> -->
+					   <input type="button" value="submit" name="submit" class=" btn" id="regisetr_btn">
+					   <div class="clearfix"> </div>
+				</div>
+				</form>
+			</div>
+	    </div>
+	</div>
+	<!--//account-->
+	<!--footer-->
+	 #include("include/footer.html")
+<!-- 	</div> -->
+	<!--footer-->
+</body>
+<script type="text/javascript">
+// $(".ui-not-null").bind('input propertychange',function(){
+// 	if($(this).val()==""){
+// 		$(this).popover();
+// 	}
+// });
+// $("#user_pass2").bind('input propertychange',function(){
+// 	if($("#user_pass2").val()!=$("#user_pass1").val()){
+// 		$("#user_pass2").popover();
+// 	}else{
+// 		var flag=1;
+// 		$(".ui-not-null").each(
+// 		function(){
+// 		   if($(this).val()==""){
+// 			   flag=0;
+// 			   $(this).popover();
+// 		   }			
+// 		}
+// 		)
+// 		$("#regisetr_btn").removeClass("disabled");
+// 	}
+// });
+$("#regisetr_btn").click(function(){
+    var index = layer.load(2, {shade: [0.8,'#fff']})
+	$.ajax({
+	  type:'post',
+	  url:$("#register_form").attr("action"),
+	  data:$("#register_form").serialize(),
+	  dataType:'json',
+	  success:function(data){
+		  layer.close(index);
+		  if(data.code<0){
+			  layer.alert(data.message
+					  ,{
+				      skin: 'layui-layer-molv'
+					  ,icon: 5
+			  });
+		  }else{
+			  layer.alert(data.message,{
+				  skin: 'layui-layer-molv'
+				  ,icon: 6 
+				  ,yes:function(){
+				  location.href=data.next_url;
+			      }
+			  })
+		  }
+	  },
+	  error:function(){
+		  layer.close(index);
+		  layer.alert("系统出错，请稍后重试！",{
+		           skin: 'layui-layer-molv'
+				  ,icon: 5
+		  });
+	  }
+	})
+})
+</script>
+</html>

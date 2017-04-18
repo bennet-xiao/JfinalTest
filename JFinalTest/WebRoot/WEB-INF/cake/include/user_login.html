@@ -1,0 +1,79 @@
+#if(session.user)
+<a href="#"><span class="glyphicon glyphicon-user" style="color:#F07818;" aria-hidden="true"></span></a>
+					<div id="loginBox"> 
+<form id="logoutForm" class="loginForm" action="/cake/user/logOut"> 
+						<fieldset id="body">
+						</fieldset>
+  <p>Hello,#(session.user.user_name). <a class="sign" href="#">log out</a> <span><a href="#">my orders?</a></span></p>
+</form>
+</div>
+<script>
+$("#logoutForm p .sign").click(function(){
+	$("#logoutForm").submit();
+})
+</script>
+#else
+<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+<div id="loginBox">     
+<form id="loginForm" class="loginForm" action="/cake/user/logIn">
+<input type='hidden' name='user_login_token' value='#(session.user_login_token)' />
+	<fieldset id="body">
+		<fieldset>
+			<label for="email">Phone</label> <input type="text"
+				name="user.phone" id="user_login_name">
+		</fieldset>
+		<fieldset>
+			<label for="password">Password</label> <input type="password"
+				name="user.password" id="user_login_password">
+		</fieldset>
+		<input type="button" id="login" value="Sign in"> <label
+			for="checkbox"><input type="checkbox" id="checkbox">
+			<i>Remember me</i></label>
+	</fieldset>
+	<p>
+		New User ? <a class="sign" href="/cake/user/register">Sign Up</a> <span><a
+			href="#">Forgot your password?</a></span>
+	</p>
+</form>
+</div>
+<script>
+$("#loginForm #login").click(function(){
+	if($("#loginForm #checkbox").is(":checked")){
+		//设置cookie
+		
+	}
+	var index = layer.load(2, {shade: [0.8,'#fff']})
+	$.ajax({
+		  type:'post',
+		  url:$("#loginForm").attr("action"),
+		  data:$("#loginForm").serialize(),
+		  dataType:'json',
+		  success:function(data){
+			  layer.close(index);
+			  if(data.code<0){
+				  layer.alert(data.message
+						  ,{
+					      skin: 'layui-layer-molv'
+						  ,icon: 5
+				  });
+			  }else{
+				  layer.alert(data.message,{
+					  skin: 'layui-layer-molv'
+					  ,icon: 6 
+					  ,yes:function(){
+					  location.href=data.next_url;
+				      }
+				  })
+			  }
+		  },
+		  error:function(){
+			  layer.close(index);
+			  layer.alert("系统出错，请稍后重试！",{
+			           skin: 'layui-layer-molv'
+					  ,icon: 5
+			  });
+		  }
+		})
+})
+</script>
+#end

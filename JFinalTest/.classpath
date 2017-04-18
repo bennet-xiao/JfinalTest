@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="jar-lib"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="lib" path="jar-lib/druid-1.0.5.jar"/>
+	<classpathentry kind="lib" path="jar-lib/jetty-server-8.1.8.jar"/>
+	<classpathentry kind="lib" path="jar-lib/jfinal-3.0-bin-with-src.jar"/>
+	<classpathentry kind="lib" path="jar-lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="jar-lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="lib" path="jar-lib/sqljdbc4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,258 @@
+<!-- //Custom Theme files -->
+<link href="/cake/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="/cake/css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- js -->
+<script src="/cake/js/jquery.min.js"></script>
+<script src="/cake/js/layer/layer.js"></script>
+<script type="text/javascript" src="/cake/js/bootstrap-3.1.1.min.js"></script>
+<!-- //js -->	
+<!-- cart -->
+<script src="/cake/js/simpleCart.min.js"> </script>
+<!-- cart -->
+<div class="header">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 class="navbar-brand"><a  href="index.html">Yummy</a></h1>
+				</div>
+				<!--navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/cake/index" #if(current_item=="home")class="active" #end>Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" #if(current_item=="birthday")class="active" #end>Birthday<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">
+									<div class="col-sm-3">
+										<h4>By Relation</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/birthday">Friend</a></li>
+											<li><a class="list" href="/cake/index/birthday>Lover</a></li>
+											<li><a class="list" href="/cake/index/birthday">Sister</a></li>
+											<li><a class="list" href="/cake/index/birthday">Brother</a></li>
+											<li><a class="list" href="/cake/index/birthday">Kids</a></li>
+											<li><a class="list" href="/cake/index/birthday">Parents</a></li>
+										</ul>
+									</div>																		
+									<div class="col-sm-3">
+										<h4>By Flavour</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/birthday">Chocolate</a></li>
+											<li><a class="list" href="/cake/index/birthday">Mixed Fruit</a></li>
+											<li><a class="list" href="/cake/index/birthday">Butterscotch</a></li>
+											<li><a class="list" href="/cake/index/birthday">Strawberry</a></li>
+											<li><a class="list" href="/cake/index/birthday">Vanilla</a></li>
+											<li><a class="list" href="/cake/index/birthday">Eggless Cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>By Theme</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/birthday">Heart shaped</a></li>
+											<li><a class="list" href="/cake/index/birthday">Cartoon Cakes</a></li>
+											<li><a class="list" href="/cake/index/birthday">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="/cake/index/birthday">Square shape</a></li>
+											<li><a class="list" href="/cake/index/birthday">Round shape</a></li>
+											<li><a class="list" href="/cake/index/birthday">Photo cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>Weight</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/birthday">1 kG</a></li>
+											<li><a class="list" href="/cake/index/birthday">1.5 kG</a></li>
+											<li><a class="list" href="/cake/index/birthday">2 kG</a></li>
+											<li><a class="list" href="/cake/index/birthday">3 kG</a></li>
+											<li><a class="list" href="/cake/index/birthday">4 kG</a></li>
+											<li><a class="list" href="/cake/index/birthday">Large</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>
+					   <li class="dropdown grid">
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown" #if(current_item=="wed")class="active" #end>Wedding<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">
+									<div class="col-sm-3">
+										<h4>By Relation</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/wed">Friend</a></li>
+											<li><a class="list" href="/cake/index/wed">Lover</a></li>
+											<li><a class="list" href="/cake/index/wed">Sister</a></li>
+											<li><a class="list" href="/cake/index/wed">Brother</a></li>
+											<li><a class="list" href="/cake/index/wed">Kids</a></li>
+											<li><a class="list" href="/cake/index/wed">Parents</a></li>
+										</ul>
+									</div>																		
+									<div class="col-sm-3">
+										<h4>By Flavour</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/wed">Chocolate</a></li>
+											<li><a class="list" href="/cake/index/wed">Mixed Fruit</a></li>
+											<li><a class="list" href="/cake/index/wed">Butterscotch</a></li>
+											<li><a class="list" href="/cake/index/wed">Strawberry</a></li>
+											<li><a class="list" href="/cake/index/wed">Vanilla</a></li>
+											<li><a class="list" href="/cake/index/wed">Eggless Cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>By Theme</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/wed">Heart shaped</a></li>
+											<li><a class="list" href="/cake/index/wed">Cartoon Cakes</a></li>
+											<li><a class="list" href="/cake/index/wed">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="/cake/index/wed">Square shape</a></li>
+											<li><a class="list" href="/cake/index/wed">Round shape</a></li>
+											<li><a class="list" href="/cake/index/wed">Photo cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>Weight</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/wed">1 kG</a></li>
+											<li><a class="list" href="/cake/index/wed">1.5 kG</a></li>
+											<li><a class="list" href="/cake/index/wed">2 kG</a></li>
+											<li><a class="list" href="/cake/index/wed">3 kG</a></li>
+											<li><a class="list" href="/cake/index/wed">4 kG</a></li>
+											<li><a class="list" href="/cake/index/wed">Large</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>				
+						<li class="dropdown grid">
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown" #if(current_item=="special")class="active" #end>Special Offers <b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">
+									<div class="col-sm-3">
+										<h4>By Relation</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/special">Friend</a></li>
+											<li><a class="list" href="/cake/index/special">Lover</a></li>
+											<li><a class="list" href="/cake/index/special">Sister</a></li>
+											<li><a class="list" href="/cake/index/special">Brother</a></li>
+											<li><a class="list" href="/cake/index/special">Kids</a></li>
+											<li><a class="list" href="/cake/index/special">Parents</a></li>
+										</ul>
+									</div>																		
+									<div class="col-sm-3">
+										<h4>By Flavour</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/special">Chocolate</a></li>
+											<li><a class="list" href="/cake/index/special">Mixed Fruit</a></li>
+											<li><a class="list" href="/cake/index/special">Butterscotch</a></li>
+											<li><a class="list" href="/cake/index/special">Strawberry</a></li>
+											<li><a class="list" href="/cake/index/special">Vanilla</a></li>
+											<li><a class="list" href="/cake/index/special">Eggless Cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>By Theme</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/special">Heart shaped</a></li>
+											<li><a class="list" href="/cake/index/special">Cartoon Cakes</a></li>
+											<li><a class="list" href="/cake/index/special">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="/cake/index/special">Square shape</a></li>
+											<li><a class="list" href="/cake/index/special">Round shape</a></li>
+											<li><a class="list" href="/cake/index/special">Photo cakes</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>Weight</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/special">1 kG</a></li>
+											<li><a class="list" href="/cake/index/special">1.5 kG</a></li>
+											<li><a class="list" href="/cake/index/special">2 kG</a></li>
+											<li><a class="list" href="/cake/index/special">3 kG</a></li>
+											<li><a class="list" href="/cake/index/special">4 kG</a></li>
+											<li><a class="list" href="/cake/index/special">Large</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>
+						<li class="dropdown grid">
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown" #if(current_item=="store")class="active" #end>Store<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									<div class="col-sm-4">
+										<h4>By Relation</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/store">Friend</a></li>
+											<li><a class="list" href="/cake/index/store">Lover</a></li>
+											<li><a class="list" href="/cake/index/store">Sister</a></li>
+											<li><a class="list" href="/cake/index/store">Brother</a></li>
+											<li><a class="list" href="/cake/index/store">Kids</a></li>
+											<li><a class="list" href="/cake/index/store">Parents</a></li>
+										</ul>
+									</div>																		
+									<div class="col-sm-4">
+										<h4>By Flavour</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/store">Chocolate</a></li>
+											<li><a class="list" href="/cake/index/store">Mixed Fruit</a></li>
+											<li><a class="list" href="/cake/index/store">Butterscotch</a></li>
+											<li><a class="list" href="/cake/index/store">Strawberry</a></li>
+											<li><a class="list" href="/cake/index/store">Vanilla</a></li>
+											<li><a class="list" href="/cake/index/store">Eggless Cakes</a></li>
+										</ul>
+									</div>								
+									<div class="col-sm-4">
+										<h4>Specials</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="/cake/index/store">Ice cream cake</a></li>
+											<li><a class="list" href="/cake/index/store">Swiss roll</a></li>
+											<li><a class="list" href="/cake/index/store">Ruske kape</a></li>
+											<li><a class="list" href="/cake/index/store">Cupcakes</a></li>
+											<li><a class="list" href="/cake/index/store">Muffin</a></li>
+											<li><a class="list" href="/cake/index/store">Merveilleux</a></li>										
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>								
+					</ul> 
+					<!--/.navbar-collapse-->
+				</div>
+				<!--//navbar-header-->
+			</nav>
+			<div class="header-info">
+				<div class="header-right search-box">
+					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
+					<div class="search">
+						<form class="navbar-form">
+							<input type="text" class="form-control">
+							<button type="submit" class="btn btn-default" aria-label="Left Align">
+								Search
+							</button>
+						</form>
+					</div>	
+				</div>
+				<div class="header-right login">
+<!-- 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a> -->
+<!-- 					<div id="loginBox">                 -->
+                    #include("user_login.html")
+<!-- 					</div> -->
+				</div>
+				<div class="header-right cart">
+					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box">
+						<h4><a href="checkout.html">
+							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
+						</a></h4>
+						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
